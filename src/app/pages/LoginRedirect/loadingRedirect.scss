@@ -1,0 +1,13 @@
+@import "../../../assets/styles/mixins";
+
+.redirecting-block {
+   min-height: 150px;
+   padding: 0 20px;
+   font-size: $font-size-base + 0.6;
+   color: white;
+
+   @include media-breakpoint-up(md) {
+      padding-left: 40px;
+      padding-right: 40px;
+   }
+}

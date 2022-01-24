@@ -1,0 +1,264 @@
+$headerHeight: 50px;
+$font-family-base-2: 'Roboto', sans-serif;
+
+
+input,
+button,
+select,
+a {
+  &:focus,
+  &:active {
+    outline:none !important;
+    box-shadow: none !important;
+    border-color: transparent;
+  }
+}
+
+.full-width {
+  float: left;
+  width: 100%;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.page {
+  margin-top: $headerHeight;
+  /* padding-top: 10px; */
+  color: var(--gray);
+  font-size: $font-size-base;
+  min-height: calc(100vh - #{$headerHeight});
+  background-color: var(--white);
+
+  @include media-breakpoint-up(xl) {
+    /* padding-left: 50px;
+    padding-right: 50px; */
+  }
+}
+
+
+.playlist-heading {
+  font-size: $font-size-base + 0.3;
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-weight: 500;
+  color: var(--dark);
+
+
+  .playlist-heading-title {
+    float: left;
+    color: var(--dark);
+    max-width: calc(100% - 50px);
+    text-decoration: none;
+
+
+  }
+
+  a.playlist-heading-title {
+
+    &:hover {
+      text-decoration: none;
+      color: var(--blue);
+    }
+  }
+
+  .playListMoreBtn {
+    float: right;
+    font-size: $font-size-base;
+    color: var(--blue);
+    width: 50px;
+    padding-top: 5px;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base + 0.6;
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-base + 1;
+  }
+}
+
+.text-truncate {
+  @include text-truncate();
+}
+
+.meta-list {
+  display: flex;
+  @include text-truncate;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .each-meta-item {
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-base - 0.1;
+    padding-left: 10px;
+    padding-right: 7px;
+    color: $gray;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 3px;
+      height: 3px;
+      border-radius: 10px;
+      background-color: var(--gray);
+    }
+
+    &:first-child {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.min-height {
+  min-height: calc(100vh - 150px);
+
+  @include media-breakpoint-up(md) {
+    min-height: calc(100vh - 200px);
+  }
+}
+
+.password-input-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .password-input {
+    float: left;
+    width: calc(100% - 40px);
+  }
+
+  .passwordViewToggle {
+    border: none;
+    width: 40px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+  }
+}
+
+.ml-05 {
+  margin-left: 5px;
+}
+
+.mr-05 {
+  margin-right: 5px;
+}
+
+.mt-05 {
+  margin-top: 5px;
+}
+
+.mb-05 {
+  margin-bottom: 5px;
+}
+
+input,
+button,
+select {
+  appearance: unset;
+}
+
+select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #ccc 50%),
+    linear-gradient(135deg, #ccc 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 0em;
+  background-repeat: no-repeat;
+}
+
+.heading-xxl {
+  font-size: $font-size-base + 1;
+}
+
+
+
+.movie-model {
+  font-size: $font-size-base - 0.26;
+  font-family: $font-family-base-2;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 3px 10px;
+  line-height: 1.2;
+  border-radius: 3px;
+  letter-spacing: 1px;
+
+  &.free {
+    background-color: var(--yellow);
+    color: var(--dark);
+  }
+
+  &.premium {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+.dot {
+  padding-left: 15px;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -3px;
+    display: block;
+    background-color: var(--gray);
+    border-radius: 100px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

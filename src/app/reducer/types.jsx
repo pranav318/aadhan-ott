@@ -1,0 +1,6 @@
+export const LOGIN_POPUP = "LOGIN_POPUP";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const CHECK_EMAIL = "CHECK_EMAIL";
+export const LOGIN_WITH_PHONE = "LOGIN_WITH_PHONE";
+export const CREATE_USER = "CREATE_USER";

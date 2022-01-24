@@ -1,0 +1,85 @@
+@import "../../../assets/styles/mixins";
+
+.user-info-block {
+   display: flex;
+   align-items: center;
+
+   .user-info-icon {
+      float: left;
+      /* width: 80px; */
+   }
+
+   .user-name-phone-block {
+      float: left;
+      /* width: calc(100% - 80px); */
+   }
+
+   .user-name {
+
+      color: white;
+   }
+
+   .user-phone {
+      font-size: $font-size-base;
+      color: white;
+   }
+
+   .userNameBtn {
+      color: white;
+      text-align: left;
+      font-size: $font-size-base + 0.7;
+      font-weight: 400;
+      padding: 0;
+      line-height: 1.2;
+
+      .edit-user-name {
+         /* border: 1px solid #666; */
+         width: 25px;
+         height: 25px;
+         padding: 3px;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 100px;
+      }
+
+      &:hover {
+         .edit-user-name {
+            background-color: var(--secondary);
+         }
+      }
+   }
+}
+
+.subscribe-now-content {
+   .subscribe-now-content-title {
+      color: white;
+      font-size: $font-size-base + 0.4;
+      text-align: center;
+      padding-bottom: 7px;
+   }
+
+   .subscribe-now-btn {
+      background-color: var(--primary);
+      color: white;
+      width: 100%;
+      text-decoration: none;
+      border: none;
+      display: block;
+      text-align: center;
+      line-height: 1;
+      padding: 13px 20px;
+      border-radius: 5px;
+      font-size: $font-size-base + 0.2;
+
+      &:hover {
+         text-decoration: none;
+         opacity: 0.9;
+      }
+   }
+}
+
+.transactions-toggle-btn {
+   padding: 10px 20px;
+   font-size: $font-size-base + 0.2;
+}

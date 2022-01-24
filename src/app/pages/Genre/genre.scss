@@ -1,0 +1,47 @@
+@import "../../../assets/styles/mixins";
+
+.genre-page {
+}
+
+.genreList {
+  display: grid;
+  grid-template-columns: calc(50% - 7px) calc(50% - 7px);
+  gap: 14px 14px;
+  transition: width 0.3s ease;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: calc(33% - 7px) calc(33% - 7px) calc(33% - 7px);
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: calc(25% - 7px) calc(25% - 7px) calc(25% - 7px) calc(
+        25% - 7px
+      );
+    gap: 9px 9px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns:
+      calc(20% - 7px) calc(20% - 7px) calc(20% - 7px) calc(20% - 7px)
+      calc(20% - 7px);
+    gap: 9px 9px;
+  }
+}
+
+.genre-title-block {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-base + 0.5;
+
+  .genere-text {
+    display: inline-flex;
+    margin-right: 7px;
+    color: white;
+    font-weight: 400;
+  }
+
+  .genre-title {
+    color: $tertiary;
+    font-weight: 700;
+  }
+}

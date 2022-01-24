@@ -1,0 +1,12 @@
+// Dark Theme Color Combo = https://color.adobe.com/search?q=dark%20theme
+
+input,
+select,
+button {
+   &:focus,
+   &:focus-within {
+      box-shadow:  0 0 0 transparent;
+      outline: none;
+      outline-color: transparent;
+   }
+}
